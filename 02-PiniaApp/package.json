@@ -1,0 +1,36 @@
+{
+  "name": "piniaapp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "backend-server": "json-server --watch ./db/db.json --port 3001",
+    "dev": "vite",
+    "build": "run-p type-check build-only",
+    "preview": "vite preview",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false"
+  },
+  "dependencies": {
+    "@tanstack/vue-query": "^4.35.2",
+    "axios": "^1.5.0",
+    "pinia": "^2.1.6",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4"
+  },
+  "devDependencies": {
+    "@tsconfig/node18": "^18.2.0",
+    "@types/node": "^18.17.5",
+    "@vitejs/plugin-vue": "^4.3.1",
+    "@vue/tsconfig": "^0.4.0",
+    "json-server": "^0.17.3",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.0.3",
+    "standard": "^17.1.0",
+    "typescript": "~5.1.6",
+    "vite": "^4.4.9",
+    "vue-tsc": "^1.8.8"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
+  }
+}
